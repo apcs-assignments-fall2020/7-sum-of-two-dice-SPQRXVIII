@@ -20,10 +20,10 @@ public class MyTests {
 
     @Test
     public void testSumOfTwoDice() {
-        int[] rolls = MyMain.sumOfTwoDice(100000);
+        double[] rolls = MyMain.sumOfTwoDice(100000);
         double[] percentages = new double[rolls.length];
         for (int i = 0; i < rolls.length; i++) {
-            percentages[i] = (double) rolls[i]/100000 * 100;
+            percentages[i] = rolls[i];
         }
 
         assertEquals(2.78, percentages[0], 1, "The % of rolls where sum == 2 should be around: " + "2.78%");
